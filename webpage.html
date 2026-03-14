@@ -1,0 +1,305 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Forwarding | NZ to China Logistics</title>
+    <style>
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #0066cc;
+            --accent-color: #ff9900;
+            --text-color: #333;
+            --bg-color: #f4f7f6;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Hero Section */
+        #hero {
+            background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+            margin-top: 60px;
+        }
+
+        #hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            max-width: 800px;
+        }
+
+        #hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        .btn {
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #e68a00;
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 5%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 3rem;
+        }
+
+        /* About Section */
+        #about .about-content {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-stats {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .stat-box {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--secondary-color);
+        }
+
+        .stat-box h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        /* Services Section */
+        #services {
+            background-color: var(--white);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--bg-color);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Contact Section */
+        #contact {
+            text-align: center;
+        }
+
+        .contact-container {
+            max-width: 600px;
+            margin: auto;
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            #about .about-content {
+                flex-direction: column;
+            }
+            nav ul {
+                display: none; /* Mobile menu requires JS, hidden for simple layout */
+            }
+            #hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">NZ-Sino Logistics</div>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h1>Connecting New Zealand Directly to China's Logistics Hub</h1>
+        <p>Leveraging 15 years of shipping expertise to deliver sharp pricing and exceptional service for Kiwi businesses.</p>
+        <a href="#contact" class="btn">Get a Quote</a>
+    </section>
+
+    <section id="about">
+        <h2>Why Choose Us?</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Based in New Zealand, we bridge the gap between local companies and the global manufacturing hub of China. By removing unnecessary middlemen, we secure highly competitive pricing without compromising on reliability.</p>
+                <br>
+                <p>With an inside understanding of Chinese logistics infrastructure and a meticulous approach to documentation and cost management, we ensure your freight moves smoothly from origin to destination.</p>
+            </div>
+            <div class="about-stats">
+                <div class="stat-box">
+                    <h3>15</h3>
+                    <p>Years Industry Experience</p>
+                </div>
+                <div class="stat-box">
+                    <h3>10</h3>
+                    <p>Years on-ground in China</p>
+                </div>
+                <div class="stat-box">
+                    <h3>100%</h3>
+                    <p>Direct Procurement</p>
+                </div>
+                <div class="stat-box">
+                    <h3>24/7</h3>
+                    <p>Dedicated Support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2>Our Core Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Ocean Freight</h3>
+                <p>FCL and LCL shipping solutions tailored to your volume. We negotiate directly with carriers to provide sharp, transparent pricing.</p>
+            </div>
+            <div class="service-card">
+                <h3>Air Freight</h3>
+                <p>Time-critical logistics utilizing established airline networks out of Shenzhen and major Chinese hubs for rapid deployment to NZ.</p>
+            </div>
+            <div class="service-card">
+                <h3>Contract Management</h3>
+                <p>Expert handling of complex shipping documentation, compliance, and rigorous cost management to protect your bottom line.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Let's Talk Freight</h2>
+        <div class="contact-container">
+            <p style="margin-bottom: 2rem;">Ready to optimize your supply chain? Contact us today to discuss your forwarding needs.</p>
+            <p><strong>Email:</strong> operations@nzsinologistics.co.nz</p>
+            <p><strong>Phone:</strong> +64 21 000 0000</p>
+            <p><strong>Location:</strong> Tauranga, New Zealand</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 NZ-Sino Logistics. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
